@@ -101,6 +101,7 @@ class ImageInsertionForm(forms.Form):
     )
     image_is_decorative = forms.BooleanField(required=False, label=_("Image is decorative"))
     alt_text = forms.CharField(required=False, label=_("Alt text"))
+    url = forms.URLField(required=False,label=_("URL"))
 
     def clean_alt_text(self):
         alt_text = self.cleaned_data['alt_text']
